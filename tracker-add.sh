@@ -8,7 +8,7 @@ while true; do
   else
     auth=
   fi
-  host=${TRANSMISSION_HOST:-localhost}
+  host=$HOSTPORT
   list_url=${TRACKER_URL:-https://cdn.jsdelivr.net/gh/ngosang/trackerslist@master/trackers_all.txt}
 
   add_trackers() {
