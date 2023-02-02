@@ -7,8 +7,8 @@ ENV TORRENTLIST=https://cdn.jsdelivr.net/gh/ngosang/trackerslist@master/trackers
 
 ADD ./tracker-add.sh .
 RUN apk add --update \
-        bash transmission-cli curl coreutils jq && \
+        bash curl coreutils jq && \
         chmod +x tracker-add.sh
 
 USER guest
-ENTRYPOINT [ "/bin/sh", "tracker-add.sh" ]
+ENTRYPOINT [ "/bin/bash", "tracker-add.sh" ]
