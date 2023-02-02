@@ -4,6 +4,7 @@ RUN apk add --no-cache tzdata
 
 ENV TZ=Asia/Shanghai
 ENV TORRENTLIST=https://cdn.jsdelivr.net/gh/ngosang/trackerslist@master/trackers_all.txt
+ENV HOSTPORT=localhost:9091
 
 ADD ./tracker-add.sh .
 RUN apk add --update \
